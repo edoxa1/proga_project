@@ -13,15 +13,18 @@
     max-height: 200px;
     border-radius: 10px;
   }
-/*
+
 .button1 {
+    width: 175px;
+    height:55px;
     background-color: #4CAF50;
     background-image: url("images/start.jpg");
     background-size: 400%;
     background-size: contain;
-}  Green */
+}  
+
 .start_button img{
-    width: 200px;
+    width: 150px;
 }
 .intro{
     display: flex;
