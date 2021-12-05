@@ -1,0 +1,13 @@
+{
+    "dialogs": [
+        {
+            "dialog_name_left":"josuke",
+            "dialog_name_right":"jotaro",
+            "dialog_image_left":"../images/j.png",
+            "dialog_image_right":"../images/jot.png",
+            "texts": [
+                "wtf", "123","lmfao"
+            ]
+        }
+    ]
+}

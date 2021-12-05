@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="level1.css">
+    
     <title>Level 1</title>
 </head>
 <body>
@@ -12,23 +13,26 @@
         <div class="dialog">
             
             <div class="dialog_images">
-                <div class="left dialog_img">
+                <div class="left dialog_img" id="left_img">
                     <img src="" alt="" class="left">
                 </div>
-                <div class="right dialog_img">
+                <div class="right dialog_img" id="right_img">
                     <img src="" alt="" class="right">
                 </div>
             </div>
-            <div class="info">
-                Josuke
-                <div class="text">
+            <div class="info" >
+                <div class="dialog_name" id="dialog_current_name">
+                    jsoke
+                </div>
+                <div class="text" id="dialog_text">
                     Lorem ipsusadasdasdalskdkajfdsajfjsdifdijughdhm dolor sit amet consectetur, adipisicing elit. Tenetur quisquam veritatis quam corrupti ipsum necessitatibus quibusdam voluptatibus obcaecati explicabo sunt distinctio, nisi totam at sit rem accusamus asperiores porro cupiditate?
                 </div>
-                <button class="button next">next</button>
+                <button class="button next" id="dialog_next_btn">next</button>
             </div>
             
             
         </div>
     </div>
+    <script src="dialog.js"></script>
 </body>
 </html>
