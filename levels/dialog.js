@@ -10,6 +10,7 @@ var dialog_text = document.getElementById("dialog_text");
 class Dialog {
     constructor(level_number) {
         this.dialog = [];
+        this.index = 0;
         this.level_number = level_number;
         this.current_dialog = {
             image_right_src: "",
@@ -25,10 +26,9 @@ class Dialog {
     }
 
     save_in(json) {
-        console.log(json);
         dialogs = json["dialogs"];
-        console.log(dialogs[0]);
-        this.dialog = dialogs[0];
+        this.dialog = dialogs[this.level_number - 1];
+        console.log(this.level_number)
         this.current_dialog = {
             image_right_src: this.dialog["dialog_image_right"],
             image_left_src: this.dialog["dialog_image_left"],
@@ -38,8 +38,21 @@ class Dialog {
     }
 
     show_dialog() {
-        dialog_name.innerText = this.current_dialog.dialog_name;
-        dialog_text.innerText = this.current_dialog.dialog_text;
+        if(this.index >= this.dialog["texts"].length)
+        {
+            document.getElementById("main_dialog").hidden = true;
+            return; 
+        }
+            
+        if(this.index % 2 == 0) {
+            dialog_name.innerText = this.dialog["dialog_name_right"];
+        }
+        else {
+            dialog_name.innerText = this.dialog["dialog_name_left"];
+        }
+        dialog_text.innerText = this.dialog["texts"][this.index];
+        this.index++;
+        left_img.src = this.dialog["dialog_image_left"];
     }
 }
 document.addEventListener("DOMContentLoaded", function () {
