@@ -22,13 +22,14 @@ class Dialog {
     readDialog() {
         fetch("dialogs.json")
             .then(response => response.json())
-            .then(data => this.save_in(data))
+            .then(data => this.save_in(data));
+            level_dialog.show_dialog();
     }
 
     save_in(json) {
         dialogs = json["dialogs"];
         this.dialog = dialogs[this.level_number - 1];
-        console.log(this.level_number)
+        
         this.current_dialog = {
             image_right_src: this.dialog["dialog_image_right"],
             image_left_src: this.dialog["dialog_image_left"],
@@ -53,8 +54,11 @@ class Dialog {
         dialog_text.innerText = this.dialog["texts"][this.index];
         this.index++;
         left_img.src = this.dialog["dialog_image_left"];
+        right_img.src = this.dialog["dialog_image_right"];
+        dialog_next_btn.innerText = "next";
     }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("loadiing jsons");
     level_dialog = new Dialog(1);
