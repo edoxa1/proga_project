@@ -1,0 +1,133 @@
+#content{
+    position:relative;
+    font-size:140%;
+    margin:5%;
+    background:linear-gradient(135deg , rgba(100 , 100 , 100 , 0.6) , rgba(20 , 20 , 20 , 0.7));
+    padding:8px;
+    border:2px solid #333;
+    z-index:3;
+    font-family:"jojo.zip";
+    letter-spacing:2px;
+    word-spacing:3px;
+    color:white;
+    text-shadow:0 0 1px black;
+}
+
+.answer{
+    text-align:center;
+    position:relative;
+    margin:auto;
+    font-size:110%;
+    display:block;
+    background:rgba(50 , 50 , 50, 0.7);
+    color:white;
+    border:1px solid black;
+    z-index:3;
+}
+
+body{
+    position:absolute;
+    width:100%;
+    height:100%;
+    margin:0;
+    opacity:0;
+    transition:all 0.5s;
+    background:black;
+}
+
+
+#back{
+    background-image: url("backgrounds/1.png");
+    width:100%;
+    height:100%;
+    position:fixed;
+    background-size: contain;
+    transition:all 0.5s;
+    z-index:3;
+    background-repeat: no-repeat;
+    margin-left: 12.5%;
+}
+
+#front{
+    width:100%;
+    height:100%;
+    position:fixed;
+    background-color:black;
+    z-index:2;
+}
+
+#all{
+    visibility: hidden;
+    transition:all 0.5s;
+    margin-top: 20%;
+}
+
+#letter{
+    position:absolute;
+    width:100%;
+    z-index:5;
+    height:100%;
+    background:#222;
+    transition:all 1s;
+    left:0;
+}
+
+#let{
+    position:absolute;
+    width:70%;
+    height:80%;
+    background:url("main wall.png");
+    left:50%;
+    transform:translate(-50%);
+    top:10%;
+    font-size:110%;
+    margin:auto;
+    border:10px solid black;
+    border-radius:10%;
+}
+
+.message{
+    padding:2px;
+    border-radius:0 15px 15px 15px;
+    margin:5px;
+    color:white;
+    opacity:0;
+    margin-top:25px;
+    background-color:rgba(0 , 0 , 150 , 0.8);
+}
+
+.rightpic {
+    float: right; /* Выравнивание по правому краю */
+    margin: 0 0 5px 5px; /* Отступы вокруг фотографии */
+   }
+
+.character{
+    width: 50%;
+    height: 20%;
+}
+
+#buttons{
+    position:absolute;
+    bottom:150px;
+    left:50%;
+    transform:translate(-30%);
+    word-spacing:15px;
+    font-size:400%;
+    color:white;
+    background: #805B5B;
+}
+
+#phoneTime{
+    margin:0;
+    border-radius:15px 15px 0 0;
+    width:100%;
+    position:absolute;
+    top:0px;
+    background-color:#606060;
+    text-align:center;
+    color:white;
+}
+
+button{
+    outline:none;
+}
